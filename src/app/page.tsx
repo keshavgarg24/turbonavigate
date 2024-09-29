@@ -6,28 +6,28 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [input, setInput] = useState<string>('');
   const [searchResults, setSearchResults] = useState<{
-    results: string[]
-    duration: number
+    results: string[];
+    duration: number;
   }>();
 
   useEffect(() => {
     const fetchData = async () => {
-      if (!input) return setSearchResults(undefined)
+      if (!input) return setSearchResults(undefined);
 
-      const res = await fetch(`https://fastapi.keshgarg24.workers.dev/api/search?q=${input}`)
-      const data = (await res.json()) as { results: string[], duration: number }
-      setSearchResults(data)
+      const res = await fetch(`https://fastapi.keshgarg24.workers.dev/api/search?q=${input}`);
+      const data = (await res.json()) as { results: string[], duration: number };
+      setSearchResults(data);
     }
-    fetchData()
-  }, [input])
+    fetchData();
+  }, [input]);
 
   return (
     <main className="h-screen w-screen gradientFlow flex flex-col items-center">
-      <div className="flex flex-col gap-6 items-center pt-32 duration-500 animate-in animate fade-in-5 slide-in-from-bottom-2.5 w-full px-4 md:px-0">
-        <h1 className="text-6xl md:text-8xl tracking-tight font-black text-zinc-900 text-center">TurboNavigate📍</h1>
-        <div className="text-zinc-600 text-lg max-w-prose text-center">
+      <div className="flex flex-col gap-6 items-center pt-16 md:pt-32 duration-500 animate-in animate fade-in-5 slide-in-from-bottom-2.5 w-full px-4 md:px-0">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl tracking-tight font-black text-zinc-900 text-center">TurboNavigate📍</h1>
+        <div className="text-zinc-600 text-base md:text-lg max-w-prose text-center">
           <p>A high-performance API built with Hono, Upstash-Redis, Next.js, and Cloudflare</p>
-          <p className="text-md">Type a query below and get results in milliseconds</p>
+          <p className="text-sm md:text-md">Type a query below and get results in milliseconds</p>
         </div>
 
         <div className="max-w-md w-full">
