@@ -1,0 +1,9 @@
+name = "turbonavigator"
+compatibility_date = "2024-09-29"
+
+[vars]
+UPSTASH_REDIS_REST_URL = "https://stirring-poodle-22492.upstash.io"
+UPSTASH_REDIS_REST_TOKEN = "AVfcAAIjcDExODUyOTk3OTZlYzc0NGZhOTkwNzkzNDUwMTMxMjFiNXAxMA"
+
+[observability]
+enabled = true
