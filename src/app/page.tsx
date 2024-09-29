@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         <a
-          href="https://github.com/your-repo" 
+          href="https://github.com/keshavgarg24/turbonavigate" 
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition duration-300"
